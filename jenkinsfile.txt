@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+    stage('stage1'){
+        step{
+            echo 'Hello this Stage one step1'
+        }
+        step{
+            echo 'Hello this is Stage one step2'
+        }
+        
+        stage('Build'){
+            echo 'application under Build Phase'
+        }
+        
+        stage('Test')
+        {
+            echo 'application under QA and UI'
+        }
+        stage('Final')
+        {
+            echo 'Done Thank you'
